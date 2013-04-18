@@ -12,7 +12,11 @@ import javax.swing.JTextField;
 
 import model.Genre;
 
-
+/**
+ * 
+ * @author Padow2
+ *
+ */
 public class Vue extends JFrame {
 	
 	// https://github.com/romfret/ws-coa/blob/master/project/src/main/java/gui/GlobalGUI.java
