@@ -1,0 +1,15 @@
+*.class
+*.settings/
+
+**target/
+
+# Package Files #
+*.war
+*.ear
+
+.waf-*
+.lock-*
+*/target/*
+*~
+*bin/*
+*.DS_Store
