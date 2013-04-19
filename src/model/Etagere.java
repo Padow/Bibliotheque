@@ -3,16 +3,26 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-
+/**
+ * 
+ * @author Padow2
+ *
+ */
 public class Etagere {
 	private int numero;
 	private List<Genre> genres;
-	
+	/**
+	 * 
+	 * @param numero
+	 */
 	public Etagere(int numero) {
 		this.numero = numero;
 		genres = new ArrayList<Genre>();
 	}
-
+	/**
+	 * 
+	 * @return
+	 */
 	public int getNumero() {
 		return numero;
 	}
@@ -29,11 +39,17 @@ public class Etagere {
 		}
 		return null;
 	}
-	
+	/**
+	 * 
+	 * @param genre
+	 */
 	public void addGenre(Genre genre) {
 		genres.add(genre);
 	}
-	
+	/**
+	 * 
+	 * @param genres
+	 */
 	public void addGenres(Collection<Genre> genres) {
 		this.genres.addAll(genres);
 	}

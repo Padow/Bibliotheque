@@ -1,8 +1,7 @@
 package model;
-
 /**
  * 
- * @author PADOW TODO
+ * @author Padow2
  *
  */
 public class Livre {

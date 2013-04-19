@@ -3,6 +3,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * 
+ * @author Padow2
+ *
+ */
 public class Bibliotheque {
 
 	private List<Etagere> etageres;
@@ -35,6 +40,12 @@ public class Bibliotheque {
 		etageres.add(etagere);
 	}
 	
+	/**
+	 * on creer un nouveau livre et on regarde si son genre existe dans la bibliotheque
+	 * @param titre
+	 * @param genre
+	 * @throws Exception
+	 */
 	public void nouveauLivre(String titre, int genre) throws Exception {
 		Livre livre = new Livre(titre, genre);
 		for (Etagere etagere : etageres) {

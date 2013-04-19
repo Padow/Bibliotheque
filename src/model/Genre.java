@@ -21,28 +21,35 @@ public class Genre {
 	
 	// Contient les livres du genre identifiantGenre dont la clef est le titre du livre et la valeur le livre lui-meme
 	private SortedMap<String, Livre> livres;
-	
+	/**
+	 * 
+	 * @param identifiantGenre
+	 * @see TreeMap
+	 */
 	public Genre(int identifiantGenre) {
 		
 		this.identifiantGenre = identifiantGenre;
 		livres = new TreeMap<String, Livre>();
-		
-//		System.out.println("Genre: "+Genre.NOM_GENRES[identifiantGenre]);
 	}
-	
+	/**
+	 * 
+	 * @return
+	 */
 	public int getIdentifiantGenre() {
 		return identifiantGenre;
 	}
-	
+	/**
+	 * 
+	 * @param livre
+	 */
 	public void placeLivre(Livre livre) {
 		// Dans l'ordre d'ajout
 		livres.put(livre.getTitre(), livre);
-		
-//		System.out.println("Genre.placeLivre(..): "+this.toString());
 	}
 	
 	/**
 	 * Retourne une liste de livres triees
+	 * @see ArrayList
 	 * @return
 	 */
 	public List<Livre> getLivres() {
@@ -59,6 +66,7 @@ public class Genre {
 		
 		return livresTries;
 	}
+	
 	
 	@Override
 	public String toString() {
