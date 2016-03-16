@@ -22,6 +22,8 @@ public class Vue extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
+	private JTextField auteurField;
+	private JTextField editeurField;
 	private JButton btnAjouter;
 	private JComboBox<String> comboBox ;
 	
@@ -44,20 +46,40 @@ public class Vue extends JFrame {
 		setContentPane(contentPane);
 		
 		JLabel lblTitre = new JLabel("Titre");
-		lblTitre.setBounds(51, 58, 46, 14);
+		lblTitre.setBounds(51, 58, 60, 14);
 		contentPane.add(lblTitre);
-		
+
+		JLabel lblAuteur = new JLabel("Auteur");
+		lblAuteur.setBounds(51, 88, 60, 14);
+		contentPane.add(lblAuteur);
+
+		JLabel lblEditeur = new JLabel("Editeur");
+		lblEditeur.setBounds(51, 118, 60, 14);
+		contentPane.add(lblEditeur);
+
+
 		JLabel lblGenre = new JLabel("Genre");
-		lblGenre.setBounds(51, 114, 46, 14);
+		lblGenre.setBounds(51, 148, 60, 14);
 		contentPane.add(lblGenre);
 		
 		textField = new JTextField();
-		textField.setBounds(133, 58, 215, 20);
+		textField.setBounds(160, 58, 215, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
+
+
+		auteurField = new JTextField();
+		auteurField.setBounds(160, 88, 215, 20);
+		contentPane.add(auteurField);
+		auteurField.setColumns(10);
+
+		editeurField = new JTextField();
+		editeurField.setBounds(160, 118, 215, 20);
+		contentPane.add(editeurField);
+		editeurField.setColumns(10);
 		
 		comboBox = new JComboBox<String>();
-		comboBox.setBounds(133, 114, 215, 20);
+		comboBox.setBounds(160, 148, 215, 20);
 		contentPane.add(comboBox);
 		for (int i=0; i<Genre.NOM_GENRES.length; i++) {
 			comboBox.addItem(Genre.NOM_GENRES[i]);
@@ -80,6 +102,13 @@ public class Vue extends JFrame {
 	public JTextField getTextField() {
 		return textField;
 	}
+	public JTextField getAuteurField() {
+		return auteurField;
+	}
+	public JTextField getEditeurField() {
+		return editeurField;
+	}
+
 	/**
 	 * recuperation de la JCombobox
 	 * @return

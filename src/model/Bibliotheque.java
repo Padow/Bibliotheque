@@ -31,7 +31,7 @@ public class Bibliotheque {
 	/**
 	 * On ajoute (creer) une etagere dans la bibliotheque contenant un seul genre de livres
 	 * @param numero
-	 * @param genres
+	 * @param genre
 	 */
 	public void modeIkea(int numero, Genre genre) {
 		Etagere etagere = new Etagere(numero);
@@ -46,8 +46,8 @@ public class Bibliotheque {
 	 * @param genre
 	 * @throws Exception
 	 */
-	public void nouveauLivre(String titre, int genre) throws Exception {
-		Livre livre = new Livre(titre, genre);
+	public void nouveauLivre(String titre,String auteur, String editeur,  int genre) throws Exception {
+		Livre livre = new Livre(titre, auteur, editeur, genre);
 		for (Etagere etagere : etageres) {
 			Genre genreDeLEtagere = etagere.getGenre(genre);
 			if (genreDeLEtagere != null) {

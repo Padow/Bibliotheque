@@ -45,7 +45,7 @@ public class Controleur implements ActionListener {
 		
 		
 		try {
-			b1.nouveauLivre(vue.getTextField().getText(), vue.getComboBox().getSelectedIndex());
+			b1.nouveauLivre(vue.getTextField().getText(), vue.getAuteurField().getText(), vue.getEditeurField().getText(), vue.getComboBox().getSelectedIndex());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

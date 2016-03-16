@@ -74,7 +74,7 @@ public class Genre {
 		List<Livre> l = getLivres();
 		sb.append("["+Genre.NOM_GENRES[identifiantGenre]+"]: ");
 		for (Livre livre : l) {
-			sb.append(livre.getTitre()+", ");
+			sb.append("Titre : "+livre.getTitre()+" Auteur : "+livre.getAuteur()+" Editeur : "+livre.getEditeur()+"/");
 		}
 		sb.append("\n");
 		return sb.toString();
